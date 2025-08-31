@@ -1,0 +1,99 @@
+name: Package
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  publish:
+    name: Publish Package
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        registry-url: 'https://registry.npmjs.org'
+        
+    - name: Create package.json
+      run: |
+        cat > package.json << EOF
+        {
+          "name": "ai-advent-package",
+          "version": "1.0.0",
+          "description": "Package from repository contents",
+          "main": "index.html",
+          "files": [
+            "*"
+          ],
+          "scripts": {
+            "start": "npx http-server -p 8080 --cors"
+          },
+          "keywords": ["package", "repository"],
+          "author": "AI Advent",
+          "license": "MIT"
+        }
+        EOF
+        
+    - name: Prepare files for package
+      run: |
+        # Create index.html if it doesn't exist and there are HTML files
+        if ls *.html 1> /dev/null 2>&1; then
+          # If there's no index.html, copy the first HTML file as index.html
+          if [ ! -f index.html ]; then
+            first_html=$(ls *.html | head -n 1)
+            cp "$first_html" index.html
+          fi
+        fi
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Build package
+      run: |
+        mkdir -p dist
+        # Copy all files except .github directory
+        find . -maxdepth 1 -not -name '.' -not -name '.github' -not -name 'dist' -exec cp -r {} dist/ \;
+        # Ensure package.json is in dist
+        cp package.json dist/
+        
+    - name: Publish to npm
+      if: github.ref == 'refs/heads/main'
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        
+    - name: Create Release
+      if: github.ref == 'refs/heads/main'
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ github.run_number }}
+        release_name: Release v${{ github.run_number }}
+        body: |
+          Automated release from CI/CD pipeline
+          
+          Changes:
+          - Updated package contents
+          - Excluded .github directory from package
+        draft: false
+        prerelease: false
+        
+    - name: Upload Release Assets
+      if: github.ref == 'refs/heads/main'
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dist/
+        asset_name: ai-advent-package-v${{ github.run_number }}.zip
+        asset_content_type: application/zip
+        
