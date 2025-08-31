@@ -15,7 +15,7 @@ jobs:
       
     - name: Create package archive
       run: |
-        tar -czf ai-advent-package.tar.gz --exclude='.github' --exclude='.git' .
+        tar -czf ai-advent-package.tar.gz --exclude='.github' --exclude='.git' --exclude='ai-advent-package.tar.gz' .
         
     - name: Create Release
       uses: actions/create-release@v1
