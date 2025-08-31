@@ -1,5 +1,11 @@
 name: Package
 
+permissions:
+  contents: read
+  actions: read
+  issues: write
+  pull-requests: write
+  
 on:
   push:
     branches: [ main ]
