@@ -1,7 +1,7 @@
 name: Package
 
 permissions:
-  contents: read
+  contents: write
   actions: read
   issues: write
   pull-requests: write
@@ -28,23 +28,24 @@ jobs:
       run: tar -czf ai-advent-package.tar.gz -C _package_dir .
 
     - name: Create Release
+      id: create_release
       uses: actions/create-release@v1
-      env:
-        PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
       with:
         tag_name: v${{ github.run_number }}
         release_name: Release v${{ github.run_number }}
         body: Automated release from CI/CD pipeline
         draft: false
         prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Upload Release Assets
       uses: actions/upload-release-asset@v1
-      env:
-        PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./ai-advent-package.tar.gz
         asset_name: ai-advent-package-v${{ github.run_number }}.tar.gz
         asset_content_type: application/gzip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
