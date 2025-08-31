@@ -12,11 +12,15 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      
-    - name: Create package archive
+
+    - name: Prepare files for packaging
       run: |
-        tar -czf ai-advent-package.tar.gz --exclude='.github' --exclude='.git' --exclude='ai-advent-package.tar.gz' .
-        
+        mkdir _package_dir
+        rsync -av --exclude='.github' --exclude='.git' --exclude='ai-advent-package.tar.gz' ./ _package_dir/
+    
+    - name: Create package archive
+      run: tar -czf ai-advent-package.tar.gz -C _package_dir .
+
     - name: Create Release
       uses: actions/create-release@v1
       env:
