@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .block {
+            flex: 1;
+            height: 250px;
+            margin: 10px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        #block1 { background-color: #ff6347; } /* Tomato */
+        #block2 { background-color: #40e0d0; } /* Turquoise */
+        #block3 { background-color: #9370db; } /* Medium Purple */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="block1" class="block"><h2>Welcome!</h2><p>This is my personal page.</p></div>
+        <div id="block2" class="block"><h2>About Me</h2><p>A little bit about myself and my interests.</p></div>
+        <div id="block3" class="block"><h2>Contact</h2><p>Feel free to reach out to me anytime!</p></div>
+    </div>
+</body>
+</html>
