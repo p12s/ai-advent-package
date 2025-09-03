@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персональная страница</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #f8f9fa;
+        }
+
+        .header, .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #ff8c00, #6a4c93);
+            margin: 0 auto;
+            animation: rotateAvatar 5s infinite linear;
+        }
+
+        .section {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .introduction {
+            background-color: #28a745;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .contact, .updates {
+            background-color: #17a2b8;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes rotateAvatar {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        h1, h2, p {
+            margin: 10px 0;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #ffeb3b;
+        }
+
+        @media (max-width: 768px) {
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <h1>Добро пожаловать!</h1>
+        <div class="avatar"></div>
+    </div>
+</header>
+
+<main class="container">
+    <section class="section introduction">
+        <h2>Обо мне</h2>
+        <p>Привет! Я увлекаюсь технологиями, музыкой и путешествиями. Надеюсь поделиться с вами своими интересными проектами и историями!</p>
+    </section>
+
+    <section class="section contact">
+        <h2>Связаться со мной</h2>
+        <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+        <p>LinkedIn: <a href="#" target="_blank" rel="noopener noreferrer">Профиль LinkedIn</a></p>
+    </section>
+
+    <section class="section updates">
+        <h2>Последние новости</h2>
+        <p>Следите за обновлениями в моем блоге и узнавайте о новых проектах!</p>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        © 2023 Ваше Имя. Все права защищены.
+    </div>
+</footer>
+
+</body>
+</html>
+```
+
+Этот HTML-код соответствует указанному плану и включает следующие улучшения:
+
+1. **Семантические элементы:** Использование `<header>`, `<main>` и `<footer>` для более ясной структуры.
+2. **Адаптивность:** Уменьшение размера анимированного аватара на устройствах с меньшим разрешением.
+3. **Интерактивные элементы:** Добавление анимации вращения для аватара, что добавляет динамичности.
+4. **Правильные ссылки:** Использование атрибутов `mailto` и `target="_blank" rel="noopener noreferrer"` для улучшения безопасности и функциональности внешних ссылок.
