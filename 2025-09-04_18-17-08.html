@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личная страница</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Светло-голубой фон */
+            color: #333; /* Темно-серый текст для легкого чтения */
+        }
+        
+        header {
+            background-color: #ff69b4; /* Блок розовато-пурпурного цвета */
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        main {
+            padding: 20px;
+        }
+        
+        .hero-section {
+            background-color: #add8e6; /* Светло-голубой блок для приветствия */
+            text-align: center;
+            padding: 50px;
+            color: white;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        
+        .about, .contact-info, .achievements {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about { background-color: #90ee90; } /* Зеленоватый цвет */
+        .contact-info { background-color: #ffa07a; } /* Кораллово-розовый цвет */
+        .achievements { background-color: #afeeee; } /* Серебристо-голубой цвет */
+
+        footer {
+            background-color: #2f4f4f; /* Тёмно-серый блок внизу страницы */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .hero-section, section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav aria-label="Главное меню">
+        <ul style="list-style-type: none; margin: 0; padding: 0;">
+            <li><a href="#about" style="color:white;">О себе</a></li>
+            <li><a href="#contact" style="color:white;">Контакты</a></li>
+            <li><a href="#achievements" style="color:white;">Достижения</a></li>
+        </ul>
+    </nav>
+    <h1>Личная страница Ивановой Алины</h1>
+</header>
+
+<main>
+
+    <section class="hero-section" id="intro">
+        <h2>Привет, это моя личная страница!</h2>
+        <p>Добро пожаловать в круг моих увлечений и знакомств.</p>
+    </section>
+
+    <section class="about" id="about">
+        <h3>О себе</h3>
+        <ul>
+            <li>Любимое хобби: Художественная горельефная керамика</li>
+            <li>Мечтаю путешествовать по миру</li>
+            <li>Читаю в основном научную фантастику</li>
+        </ul>
+    </section>
+
+    <section class="contact-info" id="contact">
+        <h3>Контактная информация</h3>
+        <p>Имя: Иванова Алина</p>
+        <p>Email: alina.ivanova@example.com</p>
+        <ul>
+            <li><a href="#" style="color:white;">Instagram</a></li>
+            <li><a href="#" style="color:white;">Facebook</a></li>
+        </ul>
+    </section>
+
+    <section class="achievements" id="achievements">
+        <h3>Достижения и интересные факты</h3>
+        <p>Организовала несколько культурных вечеров для друзей.</p>
+        <p>Победительница конкурса красивого письма на японский язык.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2023 Иванова Алина. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
