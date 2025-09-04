@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персональная страница</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f5f5dc; /* Легкий цвет фона */
+            transition: all 0.3s ease;
+        }
+        
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: #1e90ff; /* Синий для приветствия */
+            color: white;
+            flex-shrink: 0;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        section {
+            width: 90%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .introduction {
+            background-color: #32cd32; /* Зеленый для о себе */
+            padding: 20px;
+        }
+        
+        .contact {
+            background-color: #ffd700; /* Желтый для контактов */
+            padding: 20px;
+        }
+
+        .achievements {
+            background-color: #ffa07a; /* Коралл для достижений */
+            padding: 20px;
+        }
+
+        .memories {
+            background-color: #add8e6; /* Голубой для воспоминаний */
+            padding: 20px;
+        }
+
+        .message {
+            background-color: #deb887; /* Кофейный цвет для сообщений */
+            padding: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            width: 100%;
+            background-color: #4682b4; /* Средний синий для подвала */
+            color: white;
+            flex-shrink: 0;
+            padding: 10px;
+        }
+
+        @media (max-width: 600px) {
+            header, footer {
+                text-align: center;
+            }
+            
+            section {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Привет, меня зовут Иван!</h1>
+    <p>Это моя персональная страница для друзей и семьи.</p>
+</header>
+
+<main>
+    <section class="introduction">
+        <h2>О себе</h2>
+        <p>Я люблю путешествовать, читать книги и заниматься спортом. В моей жизни есть много интересных историй!</p>
+    </section>
+
+    <section class="contact">
+        <h2>Контактная информация</h2>
+        <p>Email: ivan@example.com</p>
+        <p>Телефон: +7 123-456-7890</p>
+        <ul>
+            <li><a href="#" style="color: white; text-decoration: none;">Facebook</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">Instagram</a></li>
+        </ul>
+    </section>
+
+    <section class="achievements">
+        <h2>Достижения и интересы</h2>
+        <p>Я окончил университет, собрал коллекцию книг и люблю играть на гитаре.</p>
+    </section>
+
+    <section class="memories">
+        <h2>Истории и воспоминания</h2>
+        <p>Я путешествовал по Европе, пробежал марафон и построил деревянный домик.</p>
+    </section>
+
+    <section class="message">
+        <h2>Сообщение для друзей и семьи</h2>
+        <p>Благодарю вас за поддержку и любовь. Желаю всегда оставаться вместе!</p>
+    </section>
+</main>
+
+<footer>
+    © 2023 Иван Персональная страница
+</footer>
+
+</body>
+</html>
+``` 
+
+Этот HTML-код соответствует заданным требованиям: он валиден, следует плану и адаптивен для мобильных устройств. Цветовая схема и структура страницы привлекательны и легко навигируемы без использования изображений.
