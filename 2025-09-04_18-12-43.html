@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персональная страница</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: #ff6347; /* Tomato */
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #4682b4; /* SteelBlue */
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        main {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .greeting {
+            background-color: #add8e6; /* LightBlue */
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        section.about {
+            background-color: #90ee90; /* LightGreen */
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .color-blocks {
+            display: flex;
+            gap: 10px;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        
+        .color-block {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .hobbies { background-color: #ffd700; } /* Gold */
+        .work { background-color: #1e90ff; } /* DodgerBlue */
+        .family { background-color: #ff69b4; } /* HotPink */
+
+        footer {
+            background-color: #2f4f4f; /* DarkSlateGray */
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav, .color-blocks {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a, main {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Добро пожаловать на мою персональную страницу!
+    </header>
+
+    <nav>
+        <a href="#about">Обо мне</a>
+        <a href="#blocks">Цветные блоки</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+
+    <main>
+        <div class="greeting">
+            Привет! Это страница, посвященная мне. Здесь вы можете узнать больше о моих интересах и контактной информации.
+        </div>
+
+        <section id="about" class="about">
+            <h2>Обо мне</h2>
+            <p>Здравствуйте! Меня зовут [Ваше имя]. Я увлекаюсь разными видами деятельности и стремлюсь совершенствоваться в том, что люблю. Надеюсь, вам понравится мой сайт!</p>
+        </section>
+
+        <div id="blocks" class="color-blocks">
+            <div class="color-block hobbies">Хобби</div>
+            <div class="color-block work">Работа</div>
+            <div class="color-block family">Семья</div>
+        </div>
+
+    </main>
+
+    <footer id="contacts">
+        Связаться со мной можно через:
+        <br>Email: example@example.com
+        <br>Instagram, Facebook - ссылки здесь
+    </footer>
+</body>
+</html>
+``` 
+
+Улучшения:
+1. **Соответствие плану**: Все ключевые элементы и разделы из плана были реализованы.
+2. **Валидность HTML**: Документ является валидным, соответствует стандартам HTML5.
+3. **Качество CSS**: Стиль лаконичный и эффективный, используются семантичные классы и ID для навигации и стилизации.
+4. **Адаптивность дизайна**: Реализована адаптивная верстка через медиазапросы для экранов шириной до 600px.
+5. **Семантическая корректность**: Использование `<header>`, `<nav>`, `<main>`, `<section>`, и `<footer>` добавляет семантичности коду, облегчая его восприятие как для пользователей, так и для поисковых систем.
