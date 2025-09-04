@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя персональная страница</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5DC;
+            color: #008080;
+        }
+
+        header {
+            background-color: #FFA500;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            padding: 10px;
+        }
+
+        nav a {
+            color: #F5F5DC;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .block-about {
+            background-color: #90EE90;
+        }
+
+        .block-blog {
+            background-color: #FFD700;
+        }
+
+        .block-photos {
+            background-color: #DA70D6;
+        }
+
+        .block-contact {
+            background-color: #B0E2FF;
+        }
+
+        .block-events {
+            background-color: #ADD8E6;
+        }
+
+        h1, h2 {
+            color: #FFA500;
+        }
+
+        footer {
+            background-color: #FFA500;
+            color: #F5F5DC;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Моя персональная страница</h1>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#about">Обо мне</a>
+            <a href="#blog">Блог</a>
+            <a href="#photos">Фотографии</a>
+            <a href="#contact">Контакты</a>
+            <a href="#events">События</a>
+        </nav>
+    </header>
+
+    <section id="home" class="block-about">
+        <h2>Приветствие</h2>
+        <p>Добро пожаловать на мою персональную страницу! Здесь вы найдете информацию обо мне, мои увлечения и последние новости.</p>
+    </section>
+
+    <section id="about" class="block-about">
+        <h2>Обо мне</h2>
+        <p>Я люблю путешествовать, читать книги и проводить время с друзьями и семьей.  Я всегда стремлюсь к новым знаниям и опыту.</p>
+    </section>
+
+    <section id="blog" class="block-blog">
+        <h2>Блог</h2>
+        <p>Здесь я делюсь своими мыслями и впечатлениями о жизни.</p>
+        <ul>
+            <li><a href="#">Запись 1</a></li>
+            <li><a href="#">Запись 2</a></li>
+            <li><a href="#">Запись 3</a></li>
+        </ul>
+    </section>
+
+    <section id="photos" class="block-photos">
+        <h2>Фотографии</h2>
+        <p>Фотографии из моих путешествий и интересных моментов.</p>
+        <ul>
+            <li><a href="#">Фото 1</a></li>
+            <li><a href="#">Фото 2</a></li>
+            <li><a href="#">Фото 3</a></li>
+        </ul>
+    </section>
+
+    <section id="contact" class="block-contact">
+        <h2>Контакты</h2>
+        <p>Связаться со мной можно по электронной почте: <a href="mailto:example@example.com">example@example.com</a></p>
+    </section>
+
+    <section id="events" class="block-events">
+        <h2>События</h2>
+        <p>Список предстоящих и прошедших событий.</p>
+        <ul>
+            <li><a href="#">Событие 1</a></li>
+            <li><a href="#">Событие 2</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Моя персональная страница</p>
+    </footer>
+
+</body>
+</html>
