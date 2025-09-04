@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персональная страница</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: orange;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #444;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        .about-me {
+            background-color: lightblue;
+            padding: 15px;
+        }
+
+        .event-calendar {
+            background-color: lightgreen;
+            padding: 15px;
+        }
+
+        .memories-news {
+            background-color: lavender;
+            padding: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Имя или псевдоним</h1>
+    <p>Добро пожаловать на мою страницу!</p>
+</header>
+
+<nav>
+    <a href="#about-me">О мне</a>
+    <a href="#event-calendar">Календарь событий</a>
+    <a href="#memories-news">Мемории и новости</a>
+</nav>
+
+<main>
+
+    <section id="about-me" class="about-me">
+        <h2>О мне</h2>
+        <p>Здесь можете узнать больше о моих любимых занятиях, увлечениях и краткую биографию. Позвольте представиться: я люблю путешествовать и читать книги.</p>
+        <p>Связаться со мной можно по электронной почте или в социальных сетях (ссылки).</p>
+    </section>
+
+    <section id="event-calendar" class="event-calendar">
+        <h2>Календарь событий</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <div style="width: calc(100%/3); background-color: #e0f7fa; text-align: center; padding: 15px;">День рождения (01.05)</div>
+            <div style="width: calc(100%/3); background-color: #b2dfdb; text-align: center; padding: 15px;">Праздник друга (12.06)</div>
+            <div style="width: calc(100%/3); background-color: #80cbc4; text-align: center; padding: 15px;">День отца (23.02)</div>
+        </div>
+    </section>
+
+    <section id="memories-news" class="memories-news">
+        <h2>Мемории и новости</h2>
+        <p>Здесь могут быть размещены заметки или сообщения. Например: "Последний день на пляже был незабываемым!"</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2023 Ваше Имя</p>
+</footer>
+
+</body>
+</html>
