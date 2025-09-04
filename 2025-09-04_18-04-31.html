@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Персональная Страница</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #6a1b9a; /* фиолетовый */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #ffeb3b; /* желтый */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff5e1; /* светло-желтый фон */
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .bio, .contact, .news {
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #e8f5e9; /* светло-зеленый */
+            margin-bottom: 30px;
+        }
+
+        .bio {
+            border-left: 6px solid #4caf50; /* зеленый */
+        }
+        
+        .contact {
+            border-left: 6px solid #ff4081; /* розовый */
+        }
+        
+        .news {
+            border-left: 6px solid #2196f3; /* голубой */
+        }
+
+        h2 {
+            color: #3d5afe; /* темно-синий */
+        }
+
+        footer {
+            background-color: #424242; /* темный серый */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .bio, .contact, .news {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Моя Персональная Страница</h1>
+        <nav aria-label="Главное меню">
+            <a href="#about">Обо мне</a>
+            <a href="#contact">Контакты</a>
+            <a href="#news">Новости</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="bio">
+            <h2>О Мне</h2>
+            <p>Привет! Я Иван. Страстный любитель путешествий и фотографии. Недавно начал изучать гитару.</p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Контактная Информация</h2>
+            <ul>
+                <li>Email: ivan@example.com</li>
+                <li>Телефон: +7 123-456-7890</li>
+            </ul>
+        </section>
+
+        <section id="news" class="news">
+            <h2>Новости и Заметки</h2>
+            <ul>
+                <li>Посещение Венеции в апреле.</li>
+                <li>Начало изучения программирования.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2023 Моя Персональная Страница
+    </footer>
+</body>
+</html>
+``` 
+
+Этот HTML-код соответствует описанным в плане требованиям: он содержит яркий и красочный дизайн без изображений, используя цвета для выделения различных блоков. Контент структурирован семантически, что облегчает его восприятие как пользователями, так и поисковыми системами. Использование медиазапроса делает дизайн адаптивным для мобильных устройств.
