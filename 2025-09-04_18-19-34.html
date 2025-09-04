@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Персональная Страница</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f5f5f5; /* Легкий фон для улучшения восприятия цветов */
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #ff6347; /* Тёплый оранжево-розовый */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff; /* Белый фон для контраста */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкий тень для визуального эффекта */
+        }
+
+        #home {
+            background-color: #ffdead; /* Светло-жёлтый */
+        }
+        
+        #about {
+            background-color: #f08080; /* Салатный */
+        }
+
+        #events {
+            background-color: #90ee90; /* Зеленовато-свежий */
+        }
+
+        #gallery {
+            background-color: #add8e6; /* Голубой */
+        }
+        
+        #news {
+            background-color: #ffa07a; /* Лосось */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Привет, я [Ваше Имя]!</h1>
+            <p>Добро пожаловать на мою персональную страницу.</p>
+        </header>
+
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#about">Обо мне</a>
+            <a href="#events">События жизни</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#news">Что нового?</a>
+        </nav>
+
+        <div id="home" class="section">
+            <h2>Домашняя страница</h2>
+            <p>Здесь вы можете узнать больше о моих работе, увлечениях и местонахождении.</p>
+        </div>
+
+        <div id="about" class="section">
+            <h2>Обо мне</h2>
+            <p>Я - [Ваша профессия] из [Город]. Мои увлечения включают в себя [Увлечение 1], [Увлечение 2] и [Увлечение 3].</p>
+        </div>
+
+        <div id="events" class="section">
+            <h2>События жизни</h2>
+            <ul>
+                <li><strong>Дата 1:</strong> Описание события.</li>
+                <li><strong>Дата 2:</strong> Другое важное событие.</li>
+                <!-- Добавьте больше элементов по мере необходимости -->
+            </ul>
+        </div>
+
+        <div id="gallery" class="section">
+            <h2>Галерея</h2>
+            <p>Этот раздел рассказывает о важных моментах, обозначенных цветами:</p>
+            <ul>
+                <li><strong>Тема 1:</strong> Описание.</li>
+                <li><strong>Тема 2:</strong> Другое значимое событие или достижение.</li>
+            </ul>
+        </div>
+
+        <div id="news" class="section">
+            <h2>Что нового?</h2>
+            <p>В этой секции я делюсь своими последними обновлениями и впечатлениями.</p>
+            <!-- Добавьте актуальные записи здесь -->
+        </div>
+
+        <footer>
+            <p>Свяжитесь со мной по адресу: [Ваш email]</p>
+            <p>Или найдите меня в социальных сетях.</p>
+        </footer>
+    </div>
+</body>
+</html>
