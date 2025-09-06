@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя персональная страница</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #3e8e41;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .orange { background-color: #FFA500; }
+        .turquoise { background-color: #40E0D0; }
+        .green { background-color: #32CD32; }
+        .purple { background-color: #800080; }
+        .pink { background-color: #FF69B4; }
+
+        section h2 {
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="color: #333;">Моя страница</h1>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#about">Обо мне</a>
+            <a href="#photos">Фотографии</a>
+            <a href="#blog">Блог</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <section id="home" class="orange">
+        <h2>Привет!</h2>
+        <p>Добро пожаловать на мою персональную страницу. Здесь вы найдете немного информации обо мне и моих увлечениях.</p>
+    </section>
+
+    <section id="about" class="turquoise">
+        <h2>Обо мне</h2>
+        <p>Я люблю путешествовать, читать книги и проводить время с семьей и друзьями.  Я всегда стремлюсь к новым знаниям и опыту.</p>
+    </section>
+
+    <section id="photos" class="green">
+        <h2>Фотографии</h2>
+        <p>Здесь будут фотографии из моих путешествий и событий.</p>
+    </section>
+
+    <section id="blog" class="purple">
+        <h2>Блог</h2>
+        <p>Небольшие заметки и рассказы о событиях.</p>
+    </section>
+
+    <section id="contact" class="pink">
+        <h2>Контакты</h2>
+        <p>Свяжитесь со мной: <a href="mailto:example@email.com">example@email.com</a></p>
+    </section>
+
+    <footer style="margin-top: 20px;">
+        <p>&copy; 2023 Моя персональная страница</p>
+    </footer>
+
+</body>
+</html>
